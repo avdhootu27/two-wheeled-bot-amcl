@@ -1,13 +1,20 @@
 <?xml version="1.0" ?>
 <launch>
   <param command="$(find xacro)/xacro $(find my2wbnew_description)/urdf/my2wbnew.xacro" name="robot_description"/>
-  <include
-    file="$(find gazebo_ros)/launch/empty_world.launch" />
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find my2wbnew_description)/worlds/firstWorld.world"/>
+    <arg name="debug" value="false" />
+    <arg name="gui" value="true" />
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="headless" value="false"/>
+    <env name="GAZEBO_MODEL_PATH" value="$(find simulation_gazebo)/models:$(optenv GAZEBO_MODEL_PATH)"/>
+  </include>
   <node
     name="spawn_urdf"
     pkg="gazebo_ros"
     type="spawn_model"
-    args="-param robot_description -urdf -model swerve"
+    args="-param robot_description -urdf -model my2wbnew"
     output="screen" />
   <node
     name="fake_joint_calibration"
