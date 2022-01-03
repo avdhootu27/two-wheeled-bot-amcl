@@ -1,0 +1,177 @@
+<?xml version="1.0" ?>
+<robot name="my2wbnew" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find my2wbnew_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find my2wbnew_description)/urdf/my2wbnew.trans" />
+<xacro:include filename="$(find my2wbnew_description)/urdf/my2wbnew.gazebo" />
+
+<link name="base_link">
+  <pose>0 0 0.1 0 0 0</pose>    <!-- here  -->
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0002870496075899094 0.0 0.03999708253972357"/>
+    <mass value="6.339804143151893"/>
+    <inertia ixx="0.006227" ixy="0.0" ixz="3e-06" iyy="0.02194" iyz="0.0" izz="0.026479"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://my2wbnew_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://my2wbnew_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+<link name="base_footprint">
+</link>
+<joint name="dummy_joint" type="fixed">
+  <parent link="base_footprint"/>
+  <child link="base_link"/>
+</joint>
+
+<link name="left_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.386726641017244e-07 0.010000000000000009 -6.938893903907228e-18"/>
+    <mass value="0.789168074581756"/>
+    <inertia ixx="0.000342" ixy="0.0" ixz="-0.0" iyy="0.000631" iyz="0.0" izz="0.000342"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.049786 -0.06 -0.04"/>
+    <geometry>
+      <mesh filename="package://my2wbnew_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.049786 -0.06 -0.04"/>
+    <geometry>
+      <mesh filename="package://my2wbnew_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.386726641017244e-07 -0.010000000000000009 -6.938893903907228e-18"/>
+    <mass value="0.789168074581756"/>
+    <inertia ixx="0.000342" ixy="0.0" ixz="-0.0" iyy="0.000631" iyz="-0.0" izz="0.000342"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.049786 0.06 -0.04"/>
+    <geometry>
+      <mesh filename="package://my2wbnew_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.049786 0.06 -0.04"/>
+    <geometry>
+      <mesh filename="package://my2wbnew_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="caster_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.185740158837767e-09 0.0 -0.006552631578947371"/>
+    <mass value="0.03123790295219451"/>
+    <inertia ixx="1e-06" ixy="0.0" ixz="-0.0" iyy="1e-06" iyz="-0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.070116 -0.0 -0.016"/>
+    <geometry>
+      <mesh filename="package://my2wbnew_description/meshes/caster_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.070116 -0.0 -0.016"/>
+    <geometry>
+      <mesh filename="package://my2wbnew_description/meshes/caster_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_sensor_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-2.762502050723814e-07 0.0 0.007916666666666669"/>
+    <mass value="0.08323257036604453"/>
+    <inertia ixx="6e-06" ixy="0.0" ixz="0.0" iyy="6e-06" iyz="0.0" izz="8e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.050015 -0.0 -0.062"/>
+    <geometry>
+      <mesh filename="package://my2wbnew_description/meshes/lidar_sensor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.050015 -0.0 -0.062"/>
+    <geometry>
+      <mesh filename="package://my2wbnew_description/meshes/lidar_sensor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="imu_sensor_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.3877787807814458e-18 -2.7755575615628915e-18 0.008847145831135023"/>
+    <mass value="0.03093958997852424"/>
+    <inertia ixx="1e-06" ixy="-0.0" ixz="0.0" iyy="1e-06" iyz="-0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.06"/>
+    <geometry>
+      <mesh filename="package://my2wbnew_description/meshes/imu_sensor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.06"/>
+    <geometry>
+      <mesh filename="package://my2wbnew_description/meshes/imu_sensor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rev1" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.049786 0.06 0.04"/>
+  <parent link="base_link"/>
+  <child link="left_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <!-- <limit effort="10000" velocity="1000"/> -->
+  <!-- <joint_properties damping="1.0" friction="1.0"/> -->
+</joint>
+
+<joint name="Rev2" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.049786 -0.06 0.04"/>
+  <parent link="base_link"/>
+  <child link="right_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <!-- <limit effort="10000" velocity="1000"/> -->
+  <!-- <joint_properties damping="1.0" friction="1.0"/> -->
+</joint>
+
+<joint name="Rigid3" type="fixed">
+  <origin rpy="0 0 0" xyz="0.070116 0.0 0.016"/>
+  <parent link="base_link"/>
+  <child link="caster_wheel_1"/>
+</joint>
+
+<joint name="Rigid4" type="fixed">
+  <origin rpy="0 0 0" xyz="0.050015 0.0 0.062"/>
+  <parent link="base_link"/>
+  <child link="lidar_sensor_1"/>
+</joint>
+
+<joint name="Rigid7" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.06"/>
+  <parent link="base_link"/>
+  <child link="imu_sensor_1"/>
+</joint>
+
+</robot>
