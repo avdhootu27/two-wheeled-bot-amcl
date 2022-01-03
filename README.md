@@ -1,6 +1,6 @@
 # two-wheeled-bot-autonomous-navigation
 
-In this project I am navigating a two wheeled bot autonomously in a closed environment using AMCL. The [simulation_gazebo](https://github.com/avdhootu27/two-wheeled-bot-autonomous-navigation/tree/master/simulation_gazebo) package used here is taken from [bitbucket](https://bitbucket.org/theconstructcore/simulation_gazebo/src/master/).
+In this project I am navigating a two wheeled bot autonomously in a closed environment using AMCL in ros-noetic. The [simulation_gazebo](https://github.com/avdhootu27/two-wheeled-bot-autonomous-navigation/tree/master/simulation_gazebo) package used here is taken from [bitbucket](https://bitbucket.org/theconstructcore/simulation_gazebo/src/master/).
 
 The URDF of the robot is created using Autodesk's Fusion360.
 
