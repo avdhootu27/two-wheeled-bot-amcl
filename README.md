@@ -1,4 +1,4 @@
-# two-wheeled-bot-amcl
+# two-wheeled-bot-autonomous-navigation
 
 In this project I am navigating a two wheeled bot autonomously in a closed environment using AMCL in ros-noetic. The [simulation_gazebo](https://github.com/avdhootu27/two-wheeled-bot-autonomous-navigation/tree/master/simulation_gazebo) package used here is taken from [bitbucket](https://bitbucket.org/theconstructcore/simulation_gazebo/src/master/).
 
