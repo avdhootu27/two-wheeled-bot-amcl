@@ -1,15 +1,26 @@
-my2wbnew_controller:
+my2wbnew:
   # Publish all joint states -----------------------------------
   joint_state_controller:
     type: joint_state_controller/JointStateController
     publish_rate: 50
 
   # Position Controllers --------------------------------------
-  Rev1_position_controller:
-    type: effort_controllers/JointPositionController
+  Rev1_velocity_controller:
+    type: velocity_controllers/JointVelocityController
     joint: Rev1
-    # pid: {p: 100.0, i: 0.01, d: 10.0}
-  Rev2_position_controller:
-    type: effort_controllers/JointPositionController
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Rev2_velocity_controller:
+    type: velocity_controllers/JointVelocityController
     joint: Rev2
-    # pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  gazebo_ros_control:
+    pid_gains:
+        Rev1:
+            p: 0.0
+            i: 0.0
+            d: 0.0
+        Rev2:
+            p: 0.0
+            i: 0.0
+            d: 0.0

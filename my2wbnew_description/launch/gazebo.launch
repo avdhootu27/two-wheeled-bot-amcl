@@ -21,4 +21,5 @@
     pkg="rostopic"
     type="rostopic"
     args="pub /calibrated std_msgs/Bool true" />
+  <include file="$(find my2wbnew_description)/launch/controller.launch"/>
 </launch>

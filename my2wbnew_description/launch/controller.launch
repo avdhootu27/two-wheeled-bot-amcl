@@ -1,5 +1,7 @@
 <?xml version="1.0" ?>
 <launch>
   <rosparam file="$(find my2wbnew_description)/params/controller.yaml" command="load"/>
-  <node args="Rev1_position_controller Rev2_position_controller joint_state_controller " name="controller_spawner" ns="my2wbnew" output="screen" pkg="controller_manager" respawn="false" type="spawner"/>
+  <node args="Rev1_velocity_controller Rev2_velocity_controller joint_state_controller " name="controller_spawner" ns="my2wbnew" output="screen" pkg="controller_manager" respawn="false" type="spawner"/>
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
 </launch>
