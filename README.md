@@ -8,7 +8,6 @@ The URDF of the robot is created using Autodesk's Fusion360.
 #### To run gazebo and rviz (run each command in different terminals)
 ```
 roslaunch my2wbnew_description gazebo.launch
-roslaunch my2wbnew_description controller.launch
 roslaunch my2wbnew_description display.launch
 ```
 #### For gmapping
