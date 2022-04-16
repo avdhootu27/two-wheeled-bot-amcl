@@ -14,7 +14,7 @@ roslaunch my2wbnew_description display.launch
 ```
 roslaunch my2wbnew_description gmapping.launch
 ```
-#### For amcl
+#### For autonomous navigation
 ```
 roslaunch my2wbnew_description navigation.launch
 ```
