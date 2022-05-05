@@ -11,7 +11,7 @@ $ roslaunch my2wbnew_description gazebo.launch
 $ roslaunch my2wbnew_description display.launch
 ```
 #### To start cmd publisher 
-(which make changes to original commands from cmd_vel & publishes it to new cmd_vel_new topic)
+(which make changes to original commands from cmd_vel & publishes it to new cmd_vel_new topic which is subscribed by gazebo through diffrential drive plugin)
 ```
 $ python3 <path/to/file>/cmd_pub.py
 ```
