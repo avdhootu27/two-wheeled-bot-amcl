@@ -58,14 +58,13 @@
       <updateRate>20</updateRate>
       <leftJoint>Rev1</leftJoint>
       <rightJoint>Rev2</rightJoint>
-      <wheelSeparation>0.4</wheelSeparation>
-      <wheelDiameter>0.2</wheelDiameter>
+      <wheelSeparation>0.14</wheelSeparation>
+      <wheelDiameter>0.08</wheelDiameter>
       <torque>0.1</torque>
-      <commandTopic>cmd_vel</commandTopic>
+      <commandTopic>cmd_vel_new</commandTopic>
       <odometryTopic>odom</odometryTopic>
       <odometryFrame>odom</odometryFrame>
       <robotBaseFrame>base_footprint</robotBaseFrame>
-      <!--  -->
       <rosDebugLevel>na</rosDebugLevel>  
       <publishWheelTF>false</publishWheelTF>
       <publishOdomTF>true</publishOdomTF>
@@ -74,7 +73,6 @@
       <wheelTorque>5</wheelTorque>
       <odometrySource>world</odometrySource>
       <publishTf>1</publishTf>
-      <!--  -->
     </plugin>
   </gazebo>
 
@@ -86,7 +84,7 @@
       <ray>
         <scan>
           <horizontal>
-            <samples>720</samples>
+            <samples>960</samples>
             <resolution>1</resolution>
             <min_angle>-1.570796</min_angle>
             <max_angle>1.570796</max_angle>

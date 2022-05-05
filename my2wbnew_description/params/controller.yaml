@@ -4,7 +4,7 @@ my2wbnew:
     type: joint_state_controller/JointStateController
     publish_rate: 50
 
-  # Position Controllers --------------------------------------
+  # Velocity Controllers --------------------------------------
   Rev1_velocity_controller:
     type: velocity_controllers/JointVelocityController
     joint: Rev1
@@ -17,10 +17,10 @@ my2wbnew:
   gazebo_ros_control:
     pid_gains:
         Rev1:
-            p: 0.0
+            p: 0.1
             i: 0.0
             d: 0.0
         Rev2:
-            p: 0.0
+            p: 0.1
             i: 0.0
             d: 0.0

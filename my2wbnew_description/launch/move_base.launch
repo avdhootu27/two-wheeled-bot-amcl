@@ -2,11 +2,11 @@
 <launch>
   <!-- Arguments -->
   <param name="/use_sim_time" value="true"/>
-  <arg name="model" default="diff"/>
+  <arg name="model" default="diff-corrected"/>
   <arg name="cmd_vel_topic" default="/cmd_vel" />
   <arg name="odom_topic" default="odom" />
   <arg name="move_forward_only" default="false"/>
-  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find my2wbnew_description)/maps/firstWorld.yaml"/> -->
+  
   <!-- move_base -->
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
     <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
